@@ -14,8 +14,8 @@ tests:
 	py.test -v
 
 delete:
-	@aws cloudformation delete-stack --stack-name $(STACKNAME)-$(TEMPLATE)
+	#@aws cloudformation delete-stack --stack-name $(STACKNAME)-$(TEMPLATE)
 	@echo "Waiting for stack $(STACKNAME)-$(TEMPLATE) to be deleted..."
-	@aws cloudformation wait stack-delete-complete --stack-name $(STACKNAME)-$(TEMPLATE)
+	#@aws cloudformation wait stack-delete-complete --stack-name $(STACKNAME)-$(TEMPLATE)
 
 .PHONY: build package deploy delete
