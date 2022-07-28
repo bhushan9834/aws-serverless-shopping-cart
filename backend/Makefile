@@ -12,10 +12,11 @@ deploy:  # s3 bucket still needed for layer
 
 tests:
 	py.test -v
-
-delete:
+	
+        @echo "hello there."
+#delete:
 	#@aws cloudformation delete-stack --stack-name $(STACKNAME)-$(TEMPLATE)
-	@echo "Waiting for stack $(STACKNAME)-$(TEMPLATE) to be deleted..."
+	#@echo "Waiting for stack $(STACKNAME)-$(TEMPLATE) to be deleted..."
 	#@aws cloudformation wait stack-delete-complete --stack-name $(STACKNAME)-$(TEMPLATE)
 
-.PHONY: build package deploy delete
+#.PHONY: build package deploy delete
